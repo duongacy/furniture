@@ -10,7 +10,7 @@ const HomeCollection: React.FunctionComponent<IHomeCollectionProps> = ({
 }) => {
   return (
     <Container className={`${className}`} {...props}>
-      <H4 className="tw-font-[500]">Collections</H4>
+      <H4 className="tw-font-[500]">Bộ sưu tập</H4>
       <HomeCollectionGrid>
         <CollectionItem image={{ src: "./images/home/home29.jpg" }} />
         <CollectionItem image={{ src: "./images/home/home30.jpg" }} />

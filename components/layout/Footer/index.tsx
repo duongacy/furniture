@@ -90,9 +90,9 @@ const Footer: React.FunctionComponent<
             <span className="tw-text-sm tw-text-gray-500 sm:tw-text-center dark:tw-text-gray-400">
               © 2022
               <a
-                href="https://flowbite.com/"
+                href="https://www.facebook.com/duongacy"
                 className="hover:tw-underline tw-text-secondary-60 hover:tw-text-secondary-70">
-                Flowbite™
+                YLVNDesign™
               </a>
               . All Rights Reserved.
             </span>

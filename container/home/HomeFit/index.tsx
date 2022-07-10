@@ -8,7 +8,7 @@ const HomeFit: React.FunctionComponent<ContainerProps> = ({
 }) => {
   return (
     <Container className={`${className}`} {...props}>
-      <H4 className="tw-font-[500]">Furniture that fits around you...</H4>
+      <H4 className="tw-font-[500]">Được yêu thích nhất</H4>
       <RecommendGrid className="tw-mt-[24px]">
         <HomeFitItem
           image={{
