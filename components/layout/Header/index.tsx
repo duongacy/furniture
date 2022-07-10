@@ -11,7 +11,7 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
         <Container fluid="md" className=" tw-justify-end tw-flex">
           <Link href="/">
             <a className="tw-animate-pulse tw-block tw-text-end tw-font-[700] tw-text-white tw-text-[14px] tw-leading-[48px] hover:tw-text-white">
-              Cùng khám phá chương trình khuyến mãi
+              Cùng khám phá các chương trình khuyến mãi
             </a>
           </Link>
         </Container>

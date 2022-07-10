@@ -70,7 +70,7 @@ const ProductCard: React.FC<IProductCardProps> = ({
 }) => {
   return (
     <a
-      className={`tw-block hover:tw-scale-105 tw-transform-gpu tw-duration-300 ${props.className}`}
+      className={`tw-block hover:tw-scale-105 tw-no-underline tw-transform-gpu tw-duration-300 ${props.className}`}
       {...props}>
       <div className="tw-aspect-[5/3] tw-bg-primary-10 tw-relative">
         <img
