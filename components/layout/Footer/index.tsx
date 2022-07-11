@@ -14,7 +14,7 @@ const Footer: React.FunctionComponent<
               <a
                 href="https://flowbite.com/"
                 className="tw-flex tw-items-center">
-                <span className="tw-self-center tw-text-[24px] tw-font-[700] tw-whitespace-nowrap">
+                <span className="tw-self-center tw-text-[24px] tw-font-[700] tw-text-secondary-70 hover:tw-text-secondary-90 tw-whitespace-nowrap tw-transform-gpu tw-duration-300">
                   YLVN DESIGN
                 </span>
               </a>

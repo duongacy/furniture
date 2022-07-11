@@ -1,90 +1,78 @@
+import Image, { ImageProps } from "next/image";
 import * as React from "react";
-import { Container, ContainerProps } from "react-bootstrap";
-import { H4 } from "../../../components/text";
 
-interface IHomeRecommendProps extends ContainerProps {}
-const HomeRecommend: React.FunctionComponent<IHomeRecommendProps> = ({
-  className,
-  ...props
-}) => {
+interface IHomeRecommendProps {}
+
+const HomeRecommend: React.FunctionComponent<IHomeRecommendProps> = (props) => {
   return (
-    <Container className={`${className}`} {...props}>
-      <H4 className="tw-font-[500]">Recommended for you</H4>
-      <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-mt-[32px] tw-gap-[16px] md:tw-gap-[24px]">
-        <ProductCard
+    <div className="tw-px-[16px] md:tw-px-[32px] tw-max-w-screen-xxl tw-mx-auto">
+      <p className="tw-text-[36px] tw-leading-[44px] tw-my-[24px] lg:tw-my-[64px] tw-max-w-[810px]">
+        Gợi ý dành cho bạn
+      </p>
+      <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3">
+        <HomeRecommendItem
+          title="People + AI Guidebook People + AI Guidebook People + AI Guidebook"
+          describe="Tactical guidance and best practices for designing human-centered
+        AI productshuman-centered AI productshuman-centered AI
+        productshuman-centered AI products"
           image={{
-            src: "./images/home/home32.jpg",
-            alt: "",
+            src: "/images/home/home29.jpg",
           }}
-          name="Material Design 2 guidelines"
-          description="Material Design 2 principles, styles, and best practices"
         />
-        <ProductCard
+        <HomeRecommendItem
+          title="People + AI Guidebook People + AI Guidebook People + AI Guidebook"
+          describe="Tactical guidance and best practices for designing human-centered
+        AI productshuman-centered AI productshuman-centered AI
+        productshuman-centered AI products"
           image={{
-            src: "./images/home/home33.jpg",
-            alt: "",
+            src: "/images/home/home29.jpg",
           }}
-          name="Material Design 2 guidelines"
-          description="Material Design 2 principles, styles, and best practices"
         />
-        <ProductCard
+        <HomeRecommendItem
+          title="People + AI Guidebook People + AI Guidebook People + AI Guidebook"
+          describe="Tactical guidance and best practices for designing human-centered
+        AI productshuman-centered AI productshuman-centered AI
+        productshuman-centered AI products"
           image={{
-            src: "./images/home/home34.jpg",
-            alt: "",
+            src: "/images/home/home29.jpg",
           }}
-          name="Material Design 2 guidelines"
-          description="Material Design 2 principles, styles, and best practices"
-        />
-        <ProductCard
-          image={{
-            src: "./images/home/home35.jpg",
-            alt: "",
-          }}
-          name="Material Design 2 guidelines"
-          description="Material Design 2 principles, styles, and best practices"
         />
       </div>
-    </Container>
+    </div>
   );
 };
 
 export default HomeRecommend;
 
-interface IProductCardProps
+interface IHomeRecommendItemProps
   extends React.DetailedHTMLProps<
     React.AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
   > {
-  name: string;
-  description: string;
-  image: React.DetailedHTMLProps<
-    React.ImgHTMLAttributes<HTMLImageElement>,
-    HTMLImageElement
-  >;
+  title: string;
+  describe: string;
+  image: ImageProps;
 }
-const ProductCard: React.FC<IProductCardProps> = ({
-  name,
-  description,
+
+const HomeRecommendItem: React.FunctionComponent<IHomeRecommendItemProps> = ({
   image,
+  describe,
+  title,
   ...props
 }) => {
   return (
     <a
-      className={`tw-block hover:tw-scale-105 tw-no-underline tw-transform-gpu tw-duration-300 ${props.className}`}
+      className={`tw-block hover:tw-shadow-md tw-p-[16px] md:tw-p-[32px] ${props.className}`}
       {...props}>
-      <div className="tw-aspect-[5/3] tw-bg-primary-10 tw-relative">
-        <img
-          {...image}
-          className="tw-absolute tw-w-full tw-h-full tw-object-cover"
-        />
-      </div>
-      <div className="tw-py-[16px]">
-        <div className="tw-text-[18px] tw-text-secondary-90 tw-font-semibold">
-          {name}
-        </div>
-        <p className=" tw-text-secondary-70 tw-line-clamp-2 tw-text-[14px]">
-          {description}
+      <div className=" tw-flex tw-flex-col tw-gap-[32px]">
+        <div className="tw-h-[4px] tw-bg-error"></div>
+        <p className="tw-text-[24px] tw-font-[400] tw-line-clamp-1">{title}</p>
+        <p className="tw-text-[18px] tw-leading-[30px] tw-tracking-[.00625rem] tw-font-[300] tw-line-clamp-2">
+          {describe}
         </p>
+      </div>
+      <div className="tw-mt-[32px] tw-aspect-[790/380] tw-flex-auto tw-relative">
+        <Image {...image} layout="fill" />
       </div>
     </a>
   );

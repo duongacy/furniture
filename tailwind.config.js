@@ -51,10 +51,14 @@ module.exports = {
       'xl': '1200px',
       // => @media (min-width: 1200px) { ... }
 
-      'xxl': '1400px',
+      'xxl': '1366px',
       // => @media (min-width: 1400px) { ... }
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        'md': '0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%)',
+      }
+    }
   },
   plugins: [require('@tailwindcss/line-clamp'),],
 }
