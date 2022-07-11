@@ -93,6 +93,12 @@ video {
 
 ;
 
+a {
+	text-decoration-line: none;
+	color: inherit;
+}
+
 a:hover {
 	text-decoration-line: none;
+	color: inherit;
 }
