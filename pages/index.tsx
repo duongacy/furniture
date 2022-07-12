@@ -1,21 +1,9 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import {
-  AnchorHTMLAttributes,
-  DetailedHTMLProps,
-  FC,
-  HTMLAttributes,
-  ImgHTMLAttributes,
-} from "react";
-import { Container, Stack } from "react-bootstrap";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 
-import { H4, H5, Sub3 } from "../components/text";
 import HomeCollection from "../container/home/HomeCollection";
-import HomeFit from "../container/home/HomeFit";
-import HomeIntroduce from "../container/home/HomeIntroduce";
 import HomeRecommend from "../container/home/HomeRecommend";
 
 const Home: NextPage = () => {
@@ -44,7 +32,7 @@ const Home: NextPage = () => {
 
       <HomeCollection className="tw-pt-[64px]" />
       <HomeRecommend />
-      <Footer className="tw-mt-[32px]" />
+      <Footer />
     </>
   );
 };

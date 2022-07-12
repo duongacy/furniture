@@ -1,7 +1,5 @@
 import Image from "next/image";
 import * as React from "react";
-import { Container } from "react-bootstrap";
-
 interface IHomeCollectionProps
   extends React.DetailedHTMLProps<
     React.HTMLAttributes<HTMLDivElement>,
